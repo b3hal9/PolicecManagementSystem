@@ -1,0 +1,257 @@
+.record {
+  display: flex;
+  width: 1280px;
+  height: 100%;
+  flex-direction: column;
+  margin: auto;
+}
+
+.error {
+  color: #fc6e3c;
+  margin-bottom: 5px;
+}
+.topbar {
+  margin-top: 120px;
+  width: 100%;
+  height: 250px;
+  background-color: #e4cff6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+.topbar h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.menu {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  width: 200px;
+  background: #3d59e9;
+  padding: 10px;
+  border: none;
+  margin-left: 5px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-weight: 600;
+  color: white;
+  transition: 0.1s;
+}
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  border: 2px solid #fc6e3c;
+}
+
+.btnPrimary {
+  width: 200px;
+  background: none;
+  padding: 10px;
+  border: none;
+  margin-left: 5px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-weight: 600;
+  border: 2px solid #fc6e3c;
+  transition: 0.1s;
+}
+.btnPrimary:hover {
+  background-color: #3d59e9;
+  color: white;
+  cursor: pointer;
+}
+
+.recordtable {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 16px;
+}
+
+.recordtable thead tr th {
+  background-color: #fc6e3c;
+  color: white;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.recordtable tbody tr td {
+  padding: 8px;
+  background-color: #e4cff6;
+  border-radius: 4px;
+}
+
+/* recordform */
+
+.entrybox {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.recordform {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  background-color: #e4cff6;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+.recordform h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputs label {
+  font-size: 20px;
+}
+.inputs input {
+  outline: none;
+  font-size: 20px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 60px;
+  border: 2px solid #3d59e9;
+  background: none;
+}
+
+.csvinput {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  line-height: 4;
+  color: white;
+}
+.csvinput label {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.csvinput input {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 60px;
+  border: 2px solid #3d59e9;
+}
+.csvinput .btn {
+  margin-top: 20px;
+}
+
+/*mediaqueries*/
+
+@media only screen and (max-width: 1248px) {
+  .record {
+    width: auto;
+  }
+  .recordtable thead {
+    display: none;
+  }
+  .recordtable tbody tr td {
+    width: 100%;
+    display: block;
+  }
+  .box,
+  .recordtable {
+    width: 100%;
+  }
+
+  .recordtable tbody tr td {
+    /* margin-bottom: 5px; */
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+    border-radius: 0;
+  }
+  .recordtable tbody tr td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+}
+
+/* searchbox section */
+.searchsection {
+  margin-top: 30px;
+  display: flex;
+}
+
+.searchbox {
+  background: none;
+  width: auto;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #fc6e3c;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+.searchbox input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 200px;
+}
+.searchbox button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+}
+.searchbox button i {
+  font-size: 20px;
+}
+.searchbox button:hover {
+  cursor: pointer;
+  color: #3d59e9;
+}
+
+@media only screen and (max-width: 1100px) {
+  .entrybox {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .csvinput {
+    width: auto;
+    margin-bottom: 40px;
+  }
+  .recordform {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .menu {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .topbar h1 {
+    font-size: 24px;
+  }
+  .menu button {
+    margin-bottom: 15px;
+  }
+}

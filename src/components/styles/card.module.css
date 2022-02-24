@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e4cff6;
+  width: 250px;
+  height: 150px;
+  border-radius: 16px;
+  line-height: 2;
+  transition: 0.5ms;
+}
+.container:hover {
+  cursor: pointer;
+  border-color: 2px solid #3d59e9;
+  background-color: #3d59e9;
+  color: #e4cff6;
+}
+
+.title,
+.subtitle {
+  font-size: 21px;
+  letter-spacing: 0.8px;
+}

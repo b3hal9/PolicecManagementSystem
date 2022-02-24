@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mapbox {
+  margin: auto;
+  margin-top: 100px;
+  border: 2px solid tomato;
+  border-radius: 40px;
+  overflow: hidden;
+}
